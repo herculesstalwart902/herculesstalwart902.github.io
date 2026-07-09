@@ -6,33 +6,24 @@ async function fetchNews() {
         const response = await fetch(apiUrl);
         const data = await response.json();
         
-        if (data.status === 'ok') {
+        if (data.items && data.items.length > 0) {
             const newsContainer = document.getElementById('news-container');
-            const now = new Date();
             
+            // Map the items
             const newsItems = data.items.map(item => {
-                const pubDate = new Date(item.pubDate);
-                const diffMin = Math.floor((now - pubDate) / 60000);
-                const diffHour = Math.floor(diffMin / 60);
-                const diffDay = Math.floor(diffHour / 24);
-
-                let timeAgo = "";
-                if (diffMin < 60) timeAgo = `${diffMin}m`;
-                else if (diffHour < 24) timeAgo = `${diffHour}h`;
-                else timeAgo = `${diffDay}d`;
-
-                return `<a href="${item.link}" target="_blank">${item.title} <small>(${timeAgo})</small></a>`;
+                return `<a href="${item.link}" target="_blank">${item.title}</a>`;
             }).join(" ••• ");
             
+            // Force the innerHTML update
             newsContainer.innerHTML = `<span>${newsItems}</span>`;
-        } else {
-            console.error("API Error:", data.message);
-            document.getElementById('news-container').innerHTML = "<span>News feed format error.</span>";
+            console.log("News successfully injected:", newsItems);
         }
     } catch (error) {
         console.error("Fetch Error:", error);
-        document.getElementById('news-container').innerHTML = "<span>Could not load news.</span>";
     }
 }
 
-fetchNews();
+// Ensure the function runs AFTER the HTML is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    fetchNews();
+});
