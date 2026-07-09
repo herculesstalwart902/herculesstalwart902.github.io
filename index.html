@@ -28,7 +28,6 @@
             padding-top: 120px;
         }
 
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -44,9 +43,8 @@
         }
 
         .logo img { height: 40px; width: auto; display: block; }
-
         nav { display: flex; align-items: center; gap: 25px; }
-        nav a { text-decoration: none; color: var(--text-light); font-weight: 500; font-size: 0.95rem; }
+        nav a { text-decoration: none; color: var(--text-light); font-weight: 500; }
         nav a:hover { color: var(--bright-orange); }
 
         .btn-login {
@@ -57,14 +55,13 @@
             font-weight: 700;
         }
 
-        /* News Ticker */
+        /* News Ticker - Fixed Colors */
         .news-ticker {
             position: fixed;
             top: 80px;
             width: 100%;
-            background-color: var(--deep-blue);
-            color: var(--deep-blue);
-            padding: 8px 0;
+            background-color: #05142e; /* Slightly different shade for contrast */
+            padding: 10px 0;
             overflow: hidden;
             white-space: nowrap;
             z-index: 99;
@@ -77,20 +74,16 @@
             animation: scroll 120s linear infinite; 
         }
 
-        .news-ticker:hover .ticker-content {
-            animation-play-state: paused;
-        }
+        .news-ticker:hover .ticker-content { animation-play-state: paused; }
 
         .ticker-content a {
             color: var(--bright-orange);
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 20px;
+            font-weight: 600;
         }
         
-        .ticker-content a:hover {
-            text-decoration: underline;
-            color: var(--pure-white);
-        }
+        .ticker-content a:hover { text-decoration: underline; color: var(--pure-white); }
 
         /* Action Grid */
         .action-grid {
@@ -129,6 +122,7 @@
 
     <div class="news-ticker">
         <div class="ticker-content" id="news-container">
+            <span>Loading latest Fantasy Football news...</span>
         </div>
     </div>
 
