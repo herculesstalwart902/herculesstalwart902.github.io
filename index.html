@@ -27,7 +27,7 @@
         .btn-login { background-color: var(--bright-orange); color: var(--deep-blue) !important; padding: 10px 20px; border-radius: 4px; font-weight: 700; }
 
         /* Robust Ticker Structure */
-        .ticker-wrap { position: fixed; top: 80px; width: 100%; height: 40px; background: #05142e; overflow: hidden; border-bottom: 1px solid var(--bright-orange); z-index: 99; }
+        .ticker-wrap { position: fixed; top: 80px; width: 100%; height: 40px; background: #05142e; overflow: hidden; border-bottom: 1px solid var(--bright-orange); z-index: 99; display: flex; align-items: center; line-height: 40px; }
         .ticker-move { display: inline-block; white-space: nowrap; padding-left: 100%; animation: ticker 90s linear infinite; }
         .ticker-wrap:hover .ticker-move { animation-play-state: paused; }
         @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
