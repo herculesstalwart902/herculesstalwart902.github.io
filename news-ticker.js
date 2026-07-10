@@ -6,20 +6,20 @@ async function fetchNews() {
         const response = await fetch(apiUrl);
         const data = await response.json();
         
-        if (data.items && data.items.length > 0) {
-            const newsContainer = document.getElementById('news-container');
+        if (data.items) {
+            const container = document.getElementById('news-container');
+            // We create a string of links
+            const content = data.items.map(item => 
+                `<a href="${item.link}" target="_blank">${item.title}</a>`
+            ).join(" ••• ");
             
-            // Format links with wide spacing to avoid clumping
-            const newsItems = data.items.map(item => {
-                return `<a href="${item.link}" target="_blank">${item.title}</a>`;
-            }).join(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ••• &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
-            
-            newsContainer.innerHTML = newsItems;
+            // Inject content
+            container.innerHTML = content;
         }
-    } catch (error) {
-        console.error("Fetch Error:", error);
-        document.getElementById('news-container').innerHTML = "<span>Check back later for updates.</span>";
+    } catch (err) {
+        console.error("Ticker Error:", err);
     }
 }
 
+// Run immediately
 fetchNews();
