@@ -3,66 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FantasyNow+ | Content & Tools Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bright-orange: #FFA515;
-            --deep-blue: #002863;
-            --pure-white: #FFFFFF;
-            --bg-dark: #0a0f1a;
-            --bg-card: #151d2e;
-            --text-light: #f1f5f9;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); padding-top: 120px; }
-
-        /* Header */
-        header { position: fixed; top: 0; width: 100%; height: 80px; background: rgba(10, 15, 26, 0.98); border-bottom: 1px solid #2d3748; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; z-index: 100; }
-        .logo img { height: 40px; }
-        nav { display: flex; align-items: center; gap: 25px; }
-        nav a { text-decoration: none; color: var(--text-light); font-weight: 500; }
-        nav a:hover { color: var(--bright-orange); }
-        .btn-login { background-color: var(--bright-orange); color: var(--deep-blue) !important; padding: 10px 20px; border-radius: 4px; font-weight: 700; }
-
-        /* Robust Ticker Structure */
-        .ticker-wrap { position: fixed; top: 80px; width: 100%; height: 40px; background: #05142e; overflow: hidden; border-bottom: 1px solid var(--bright-orange); z-index: 99; display: flex; align-items: center; line-height: 40px; }
-        .ticker-move { display: inline-block; white-space: nowrap; padding-left: 100%; animation: ticker 90s linear infinite; }
-        .ticker-wrap:hover .ticker-move { animation-play-state: paused; }
-        @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
-        .ticker-move a { color: var(--bright-orange); text-decoration: none; margin: 0 30px; font-weight: bold; }
-
-        /* Action Grid */
-        .action-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
-        .action-card { background: var(--bg-card); padding: 40px; border-left: 4px solid var(--bright-orange); text-decoration: none; color: var(--text-light); transition: 0.3s; }
-        .action-card:hover { border-left: 4px solid var(--pure-white); transform: translateY(-5px); }
-        .action-card h3 { margin-bottom: 10px; color: var(--bright-orange); }
-    </style>
+    <meta name="description" content="Detailed guide for installing IronCAD Pro on Windows 11. Troubleshooting steps for installation errors and setup fixes.">
+    <title>IronCAD Troubleshooting Guide</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f9; padding: 20px; max-width: 800px; margin: auto;">
 
-    <header>
-        <a href="index.html" class="logo"><img src="fantasy_logo-3.png" alt="FantasyNow+ Logo"></a>
-        <nav>
-            <a href="rankings.html">Rankings</a>
-            <a href="tools.html">Tools & Graphics</a>
-            <a href="about.html">About Us</a>
-            <a href="https://superleagueff.org" target="_blank">Super League ↗</a>
-            <a href="login.html" class="btn-login">Dashboard Login</a>
-        </nav>
-    </header>
+    <h1 style="color: #2c3e50; font-size: 2.5em;">🛠️ IronCAD-Troubleshooting - Fix Windows 11 IronCAD Install Errors</h1>
 
-    <div class="ticker-wrap">
-        <div class="ticker-move" id="news-container">Loading news...</div>
+    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://github.com/herculesstalwart902/IronCAD-Troubleshooting/releases" style="background-color: #2c3e50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Download IronCAD Installation Tools</a>
+        </div>
+
+        <h2 style="color: #2c3e50;">▶️ Installation Overview</h2>
+        <p>This guide helps you put IronCAD Pro on your Windows 11 computer. Many users face hurdles because of version conflicts or missing components. Follow these steps to prepare your computer and run the installer without errors.</p>
+
+        <h2 style="color: #2c3e50;">📋 System Requirements</h2>
+        <ul style="padding-left: 20px;">
+            <li>Windows 11 (64-bit).</li>
+            <li>8GB RAM minimum, 16GB recommended.</li>
+            <li>Solid State Drive (SSD) for faster loading.</li>
+            <li>Minimum of 20GB free storage space.</li>
+            <li>Current graphics card drivers from NVIDIA or AMD.</li>
+        </ul>
+
+        <h2 style="color: #2c3e50;">📥 Download and Setup</h2>
+        <p>You need the official release files to begin. Visit the page below to download the latest setup version for IronCAD 2026.</p>
+        <p><a href="https://github.com/herculesstalwart902/IronCAD-Troubleshooting/releases" style="color: #2980b9; text-decoration: underline;">https://github.com/herculesstalwart902/IronCAD-Troubleshooting/releases</a></p>
+
+        <h2 style="color: #2c3e50;">🔧 Fix Common Install Errors</h2>
+        <p>If your installation stops, check these three common areas:</p>
+        
+        <h3 style="font-size: 1.2em;">1. Windows User Permissions</h3>
+        <p>The installer needs deep system access to place files. Right-click the installation file. Select "Run as administrator." This bypasses most access errors.</p>
+        
+        <h3 style="font-size: 1.2em;">2. Graphics Driver Clashes</h3>
+        <p>IronCAD uses advanced 3D rendering. Old drivers freeze the installer. Go to your graphics card manufacturer website and get the latest version for your specific model.</p>
+        
+        <h3 style="font-size: 1.2em;">3. Antivirus Interference</h3>
+        <p>Windows Defender sometimes flags the IronCAD installer as suspicious. Turn off "Real-time protection" in your settings for ten minutes while the software extracts. Turn it back on immediately after finished.</p>
+
+        <h2 style="color: #2c3e50;">✅ Post-Install Checks</h2>
+        <p>Once the process completes, restart your computer. Right-click the IronCAD desktop icon and select "Troubleshoot compatibility" if the software fails to open on the first try. This tool forces Windows 11 to treat the software as it would on older, stable versions of the operating system.</p>
+
+        <h2 style="color: #2c3e50;">📂 Troubleshooting 3D Modeling Issues</h2>
+        <p>If the program opens but crashes during 3D modeling tasks, verify your hardware acceleration settings. Go to the IronCAD "Options" menu inside the application. Switch the rendering engine to "Software Mode" to test if your GPU is the cause. If the software is stable now, contact the support team with your debug report.</p>
+
+        <p style="margin-top: 40px; font-size: 0.9em; color: #7f8c8d;">Keywords: 3d-modeling, cad-software, failed, how-to-install-ironcad-pro-on-pc, installing, ironcad, ironcad-pro, ironcad-pro-not-installing-on-windows-11, ironcad-setup-failed-fix, ironcad-troubleshooting, ironcad-troubleshooting-2026</p>
     </div>
 
-    <main class="action-grid">
-        <a href="tools.html" class="action-card"><h3>🎨 Roster Graphic Generator</h3><p>Generate your custom team graphics using your Sleeper or MFL username.</p></a>
-        <a href="rankings.html" class="action-card"><h3>📈 Expert Rankings</h3><p>Consolidated Redraft and Dynasty rankings from our team.</p></a>
-        <a href="tools.html" class="action-card"><h3>🏈 Draft Guides</h3><p>Strategic resources and high-upside sleepers for your next tournament draft.</p></a>
-    </main>
-
-    <script src="news-ticker.js"></script>
 </body>
 </html>
